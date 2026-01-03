@@ -1,6 +1,6 @@
 <template>
-  <div class="flex flex-col mt-5">
-    <div class="w-full flex justify-center">
+  <div class="flex flex-col min-h-screen">
+    <div class="w-full flex justify-center mt-5">
       <div
         class="flex items-center gap-6 border border-neutral-900 dark:border-neutral-50 py-1 px-4 rounded-2xl"
       >
