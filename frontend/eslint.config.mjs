@@ -9,7 +9,9 @@ export default withNuxt(
         'comma-dangle': 'off',
         'vue/comma-dangle': 'off',
         'vue/singleline-html-element-content-newline': 'off',
-        'vue/max-attributes-per-line': 'off'
+        'vue/max-attributes-per-line': 'off',
+        '@stylistic/semi': 'off',
+        '@stylistic/comma-dangle': 'off'
       }
     }
   ]
