@@ -44,7 +44,7 @@ onMounted(() => {
           class="font-bold text-7xl"
         />
       </div>
-      <!-- <p class="font-semibold text-xl">A full-stack web developer</p> -->
+
       <LetterPullup words="A full-stack web developer" class="font-semibold text-xl" />
 
       <ClientOnly>
