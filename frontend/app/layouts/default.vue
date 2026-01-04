@@ -11,7 +11,7 @@
         <NuxtLink to="/experience" class="font-semibold">Experience</NuxtLink>
         <NuxtLink to="/projects" class="font-semibold">Projects</NuxtLink>
         <p class="font-semibold cursor-pointer">Resume</p>
-        <UColorModeButton class="cursor-pointer" />
+        <ColorModeButton class="cursor-pointer" />
       </div>
     </div>
 
