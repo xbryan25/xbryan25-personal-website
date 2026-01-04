@@ -11,7 +11,8 @@ export default withNuxt(
         'vue/singleline-html-element-content-newline': 'off',
         'vue/max-attributes-per-line': 'off',
         '@stylistic/semi': 'off',
-        '@stylistic/comma-dangle': 'off'
+        '@stylistic/comma-dangle': 'off',
+        '@stylistic/member-delimiter-style': 'off'
       }
     }
   ]
