@@ -30,7 +30,6 @@ onMounted(() => {
       />
 
       <div class="flex gap-5 pr-16">
-        <!-- <p class="font-bold text-7xl">Bryan Agan</p> -->
         <SparklesText
           text="Bryan Agan"
           :colors="{ first: '#9E7AFF', second: '#FE8BBB' }"
