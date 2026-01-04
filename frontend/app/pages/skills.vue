@@ -58,7 +58,8 @@ onMounted(() => {
 
       <div class="flex flex-col mt-10 gap-10">
         <div class="flex flex-col gap-6 items-center">
-          <h2 class="font-bold text-2xl">Languages</h2>
+          <LetterPullup words="Languages" class="font-semibold text-2xl" />
+
           <UMarquee pause-on-hover class="max-w-[60vw] [--duration:10s]">
             <UTooltip
               v-for="(languageIcon, index) in languagesIcons"
@@ -74,7 +75,8 @@ onMounted(() => {
         </div>
 
         <div class="flex flex-col gap-6 items-center">
-          <h2 class="font-bold text-2xl">Databases</h2>
+          <LetterPullup words="Databases" class="font-semibold text-2xl" />
+
           <UMarquee pause-on-hover class="max-w-[60vw] [--duration:10s]">
             <UTooltip
               v-for="(databasesIcon, index) in databasesIcons"
@@ -90,7 +92,8 @@ onMounted(() => {
         </div>
 
         <div class="flex flex-col gap-6 items-center">
-          <h2 class="font-bold text-2xl">Frameworks</h2>
+          <LetterPullup words="Frameworks" class="font-semibold text-2xl" />
+
           <UMarquee pause-on-hover class="max-w-[60vw] [--duration:10s]">
             <UTooltip
               v-for="(frameworksIcon, index) in frameworksIcons"
@@ -106,7 +109,8 @@ onMounted(() => {
         </div>
 
         <div class="flex flex-col gap-6 items-center">
-          <h2 class="font-bold text-2xl">Other Technologies</h2>
+          <LetterPullup words="Other Technologies" class="font-semibold text-2xl" />
+
           <UMarquee pause-on-hover class="max-w-[60vw] [--duration:10s]">
             <UTooltip
               v-for="(otherTechnologiesIcon, index) in otherTechnologiesIcons"
