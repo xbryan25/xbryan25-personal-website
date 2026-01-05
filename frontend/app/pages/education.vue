@@ -35,7 +35,7 @@ onMounted(() => {
 
   intervalId = window.setInterval(() => {
     active.value = (active.value + 1) % (educationItems.length + 1);
-  }, 500);
+  }, 750);
 });
 
 onUnmounted(() => {
