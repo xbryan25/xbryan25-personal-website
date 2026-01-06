@@ -1,4 +1,10 @@
 <script setup lang="ts">
+definePageMeta({
+  head: {
+    link: { rel: 'preload', as: 'image', href: '/images/self-portrait.jpg' },
+  },
+});
+
 const colorMode = useColorMode();
 
 const isDark = computed({
