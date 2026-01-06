@@ -1,4 +1,8 @@
 <script setup lang="ts">
+useHead({
+  title: 'Projects',
+});
+
 const show = ref(false);
 
 onMounted(() => {

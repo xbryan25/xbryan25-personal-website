@@ -31,6 +31,10 @@ definePageMeta({
   },
 });
 
+useHead({
+  title: 'Skills',
+});
+
 const show = ref(false);
 
 const languagesIcons = [
