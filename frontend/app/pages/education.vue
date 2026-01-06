@@ -1,6 +1,10 @@
 <script setup lang="ts">
 import type { TimelineItem } from '@nuxt/ui';
 
+useHead({
+  title: 'Education',
+});
+
 const show = ref(false);
 
 const educationItems: TimelineItem[] = [

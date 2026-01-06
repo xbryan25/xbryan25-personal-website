@@ -5,6 +5,10 @@ definePageMeta({
   },
 });
 
+useHead({
+  title: 'Home',
+});
+
 const colorMode = useColorMode();
 
 const isDark = computed({
