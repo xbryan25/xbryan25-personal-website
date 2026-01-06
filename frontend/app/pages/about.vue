@@ -19,9 +19,9 @@ onMounted(() => {
         About Me
       </p>
 
-      <ClientOnly>
-        <BlurReveal :delay="0" :duration="0.75">
-          <div class="flex flex-col mt-10 gap-10">
+      <div>
+        <ClientOnly>
+          <BlurReveal :delay="0.5" :duration="0.75" class="flex flex-col mt-10 gap-10">
             <div class="flex flex-col gap-3">
               <h2 class="font-bold text-2xl">Who am I?</h2>
               <p class="text-justify">
@@ -69,9 +69,9 @@ onMounted(() => {
                 My other hobbies include working out, cooking, and playing video games.
               </p>
             </div>
-          </div>
-        </BlurReveal>
-      </ClientOnly>
+          </BlurReveal>
+        </ClientOnly>
+      </div>
     </div>
   </div>
 </template>
