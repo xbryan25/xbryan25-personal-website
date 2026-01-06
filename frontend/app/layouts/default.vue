@@ -79,11 +79,14 @@ const isActive = (path: string) => {
         >
           Projects
         </NuxtLink>
-        <p
+        <a
+          href="/pdfs/xbryan25-latest-resume.pdf"
+          target="_blank"
+          rel="noopener"
           class="font-semibold cursor-pointer text-neutral-400 hover:text-neutral-800 dark:hover:text-neutral-100"
         >
           Resume
-        </p>
+        </a>
         <ColorModeButton class="cursor-pointer" />
       </div>
     </div>

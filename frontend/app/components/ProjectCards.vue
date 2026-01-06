@@ -69,7 +69,7 @@ const projectInfos = [
   {
     projectTitle: 'CLI Super TicTacToe',
     projectLink: 'https://github.com/xbryan25/C_SuperTicTacToe',
-    projectDescription: 'A command-line interface Super TicTacToe made using C',
+    projectDescription: 'A command-line interface Super TicTacToe made using C.',
     usedTechnologies: ['C'],
   },
   {
