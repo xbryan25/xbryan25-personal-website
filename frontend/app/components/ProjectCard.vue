@@ -1,25 +1,36 @@
+<script setup lang="ts">
+const props = defineProps<{
+  projectTitle: string;
+  projectLink: string;
+  projectDescription: string;
+  usedTechnologies: string[];
+}>();
+</script>
+
 <template>
   <div class="flex flex-col border-2 rounded-xl">
-    <div class="pt-4 px-4 pb-1">
-      <h2 class="font-bold text-2xl">Libris</h2>
+    <div class="flex gap-2 pt-4 px-4 pb-1">
+      <h2 class="flex-1 font-bold text-2xl">{{ props.projectTitle }}</h2>
+
+      <a :href="props.projectLink" target="_blank" class="flex">
+        <UIcon name="mdi:github" class="h-8 w-8" />
+      </a>
     </div>
 
-    <div class="px-4 py-2 text-justify">
+    <div class="flex-1 px-4 py-2 text-justify">
       <p>
-        A book sharing app that makes user go boom. A book sharing app that makes user go boom.A
-        book sharing app that makes user go boom.A book sharing app that makes user go boom.
+        {{ props.projectDescription }}
       </p>
     </div>
 
     <div class="p-4">
       <div class="flex flex-wrap gap-2">
-        <UBadge label="Nuxt" variant="subtle" />
-        <UBadge label="Nuxt" variant="subtle" />
-        <UBadge label="Nuxt" variant="subtle" />
-        <UBadge label="Nuxt" variant="subtle" />
-        <UBadge label="Nuxt" variant="subtle" />
-        <UBadge label="Nuxt" variant="subtle" />
-        <UBadge label="Nuxt" variant="subtle" />
+        <UBadge
+          v-for="(tech, index) in props.usedTechnologies"
+          :key="index"
+          :label="tech"
+          variant="subtle"
+        />
       </div>
     </div>
   </div>
