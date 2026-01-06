@@ -8,12 +8,15 @@ const props = defineProps<{
 </script>
 
 <template>
-  <div class="flex flex-col border-2 rounded-xl">
+  <div class="flex flex-col border-2 rounded-xl h-full">
     <div class="flex gap-2 pt-4 px-4 pb-1">
       <h2 class="flex-1 font-bold text-2xl">{{ props.projectTitle }}</h2>
 
       <a :href="props.projectLink" target="_blank" class="flex">
-        <UIcon name="mdi:github" class="h-8 w-8" />
+        <UIcon
+          name="mdi:github"
+          class="h-8 w-8 rounded-md dark:hover:bg-neutral-400 hover:bg-neutral-600"
+        />
       </a>
     </div>
 
