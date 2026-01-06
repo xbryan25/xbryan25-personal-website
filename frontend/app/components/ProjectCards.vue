@@ -1,4 +1,6 @@
 <script setup lang="ts">
+import { Motion } from 'motion-v';
+
 const projectInfos = [
   {
     projectTitle: 'Libris',
@@ -89,13 +91,32 @@ const projectInfos = [
 
 <template>
   <div class="grid md:grid-cols-2 sm:grid-cols-1 gap-5 w-full">
-    <ProjectCard
+    <Motion
       v-for="(projectInfo, index) in projectInfos"
-      :key="index"
-      :project-title="projectInfo.projectTitle"
-      :project-link="projectInfo.projectLink"
-      :project-description="projectInfo.projectDescription"
-      :used-technologies="projectInfo.usedTechnologies"
-    />
+      :key="projectInfo.projectTitle"
+      :initial="{
+        opacity: 0,
+        transform: 'translateY(10px)',
+        filter: 'blur(10px)',
+      }"
+      :while-in-view="{
+        opacity: 1,
+        transform: 'translateY(0)',
+        filter: 'blur(0px)',
+      }"
+      :transition="{
+        delay: 0.25 * index,
+        duration: 0.75,
+        easing: 'easeInOut',
+      }"
+      :in-view-options="{ once: true }"
+    >
+      <ProjectCard
+        :project-title="projectInfo.projectTitle"
+        :project-link="projectInfo.projectLink"
+        :project-description="projectInfo.projectDescription"
+        :used-technologies="projectInfo.usedTechnologies"
+      />
+    </Motion>
   </div>
 </template>
