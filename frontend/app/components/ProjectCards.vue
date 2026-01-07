@@ -90,7 +90,7 @@ const projectInfos = [
 </script>
 
 <template>
-  <div class="grid md:grid-cols-2 sm:grid-cols-1 gap-5 w-full">
+  <div class="grid rid-cols-1 sm:grid-cols-2 g gap-5 w-full px-10 lg:px-0">
     <Motion
       v-for="(projectInfo, index) in projectInfos"
       :key="projectInfo.projectTitle"
