@@ -86,7 +86,7 @@ onUnmounted(() => {
         v-model="active"
         reverse
         :items="educationItems"
-        size="3xl"
+        size="lg"
         :ui="{
           container: 'h-50',
           date: 'text-xs',
