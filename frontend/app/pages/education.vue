@@ -31,6 +31,9 @@ const educationItems: TimelineItem[] = [
 const active = ref(-1);
 let intervalId: number | undefined;
 
+const width = ref(0);
+const height = ref(0);
+
 onMounted(() => {
   // Trigger animation on mount
   requestAnimationFrame(() => {
@@ -40,6 +43,14 @@ onMounted(() => {
   intervalId = window.setInterval(() => {
     active.value = (active.value + 1) % (educationItems.length + 1);
   }, 750);
+
+  width.value = window.innerWidth;
+  height.value = window.innerHeight;
+
+  window.addEventListener('resize', () => {
+    width.value = window.innerWidth;
+    height.value = window.innerHeight;
+  });
 });
 
 onUnmounted(() => {
@@ -51,13 +62,14 @@ onUnmounted(() => {
   <div class="flex-1 flex justify-center h-full">
     <div class="class flex flex-col items-center max-w-200 gap-20">
       <p
-        class="font-bold text-7xl mt-15 opacity-0 scale-10 transition-all duration-750 ease-out"
+        class="font-bold text-5xl md:text-7xl mt-15 opacity-0 scale-10 transition-all duration-750 ease-out"
         :class="show ? 'opacity-100 scale-100' : ''"
       >
         My Education
       </p>
 
       <UTimeline
+        v-if="width >= 960"
         v-model="active"
         reverse
         :items="educationItems"
@@ -67,6 +79,20 @@ onUnmounted(() => {
           container: 'h-50',
         }"
         class="translate-x-[calc(50%-1rem)]"
+      />
+
+      <UTimeline
+        v-else
+        v-model="active"
+        reverse
+        :items="educationItems"
+        size="3xl"
+        :ui="{
+          container: 'h-50',
+          date: 'text-xs',
+          title: 'text-xs',
+          description: 'text-xs',
+        }"
       />
     </div>
   </div>
