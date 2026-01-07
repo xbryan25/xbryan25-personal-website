@@ -93,10 +93,10 @@ onMounted(() => {
       </p>
 
       <div class="flex flex-col mt-10 gap-10">
-        <div class="flex flex-col gap-6 items-center">
+        <div class="flex flex-col gap-6 items-center w-full">
           <LetterPullup words="Languages" class="font-semibold text-2xl" />
 
-          <BoxReveal color="#E1251B" :delay="1.0">
+          <BoxReveal color="#E1251B" :delay="1.0" class="w-[60vw]">
             <UMarquee pause-on-hover class="max-w-[60vw] [--duration:10s]">
               <UTooltip
                 v-for="(languageIcon, index) in languagesIcons"
@@ -112,11 +112,11 @@ onMounted(() => {
           </BoxReveal>
         </div>
 
-        <div class="flex flex-col gap-6 items-center">
+        <div class="flex flex-col gap-6 items-center w-full">
           <LetterPullup words="Databases" class="font-semibold text-2xl" />
 
-          <BoxReveal color="#E1251B" :delay="1.0">
-            <UMarquee pause-on-hover class="max-w-[60vw] [--duration:10s]">
+          <BoxReveal color="#E1251B" :delay="1.0" class="w-[60vw]">
+            <UMarquee pause-on-hover class="[--duration:10s]">
               <UTooltip
                 v-for="(databasesIcon, index) in databasesIcons"
                 :key="index"
@@ -131,10 +131,10 @@ onMounted(() => {
           </BoxReveal>
         </div>
 
-        <div class="flex flex-col gap-6 items-center">
+        <div class="flex flex-col gap-6 items-center w-full">
           <LetterPullup words="Frameworks" class="font-semibold text-2xl" />
 
-          <BoxReveal color="#E1251B" :delay="1.0">
+          <BoxReveal color="#E1251B" :delay="1.0" class="w-[60vw]">
             <UMarquee pause-on-hover class="max-w-[60vw] [--duration:10s]">
               <UTooltip
                 v-for="(frameworksIcon, index) in frameworksIcons"
@@ -150,10 +150,10 @@ onMounted(() => {
           </BoxReveal>
         </div>
 
-        <div class="flex flex-col gap-6 items-center">
+        <div class="flex flex-col gap-6 items-center w-full">
           <LetterPullup words="Other Technologies" class="font-semibold text-2xl" />
 
-          <BoxReveal color="#E1251B" :delay="1.0">
+          <BoxReveal color="#E1251B" :delay="1.0" class="w-[60vw]">
             <UMarquee pause-on-hover class="max-w-[60vw] [--duration:10s]">
               <UTooltip
                 v-for="(otherTechnologiesIcon, index) in otherTechnologiesIcons"
