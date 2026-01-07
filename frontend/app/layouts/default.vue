@@ -95,8 +95,10 @@ onMounted(() => {
             :to="link.to"
             class="flex-1 font-semibold text-sm text-center"
             :class="{
-              'text-neutral-800 dark:text-neutral-100': isActive('/'),
-              'text-neutral-400 hover:text-neutral-800 dark:hover:text-neutral-100': !isActive('/'),
+              'text-neutral-800 dark:text-neutral-100': isActive(link.to),
+              'text-neutral-400 hover:text-neutral-800 dark:hover:text-neutral-100': !isActive(
+                link.to,
+              ),
             }"
           >
             {{ link.label }}
