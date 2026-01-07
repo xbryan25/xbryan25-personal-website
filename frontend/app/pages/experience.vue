@@ -9,7 +9,7 @@ const show = ref(false);
 
 const experienceItems: TimelineItem[] = [
   {
-    date: 'June 2025 - August 2025',
+    date: 'June 2025 to August 2025',
     title: 'SkoolTek',
     icon: 'material-symbols:work',
     description: 'Software Developer Intern',
@@ -39,7 +39,7 @@ onUnmounted(() => {
   <div class="flex-1 flex justify-center h-full">
     <div class="class flex flex-col items-center max-w-200 gap-20">
       <p
-        class="font-bold text-7xl mt-15 opacity-0 scale-10 transition-all duration-750 ease-out"
+        class="font-bold text-5xl md:text-7xl mt-15 opacity-0 scale-10 transition-all duration-750 ease-out"
         :class="show ? 'opacity-100 scale-100' : ''"
       >
         My Experience
@@ -53,6 +53,9 @@ onUnmounted(() => {
         :ui="{
           item: 'even:flex-row-reverse even:-translate-x-[calc(100%-3rem)] even:text-right',
           container: 'h-50',
+          date: 'text-xs sm:text-sm',
+          title: 'text-xs sm:text-sm',
+          description: 'text-xs sm:text-sm',
         }"
         class="translate-x-[calc(50%-1rem)]"
       />
