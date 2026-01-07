@@ -5,10 +5,21 @@ useHead({
 
 const show = ref(false);
 
+const width = ref(0);
+const height = ref(0);
+
 onMounted(() => {
   // Trigger animation on mount
   requestAnimationFrame(() => {
     show.value = true;
+  });
+
+  width.value = window.innerWidth;
+  height.value = window.innerHeight;
+
+  window.addEventListener('resize', () => {
+    width.value = window.innerWidth;
+    height.value = window.innerHeight;
   });
 });
 </script>

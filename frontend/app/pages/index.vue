@@ -22,10 +22,21 @@ const isDark = computed({
 
 const show = ref(false);
 
+const width = ref(0);
+const height = ref(0);
+
 onMounted(() => {
   // Trigger animation on mount
   requestAnimationFrame(() => {
     show.value = true;
+  });
+
+  width.value = window.innerWidth;
+  height.value = window.innerHeight;
+
+  window.addEventListener('resize', () => {
+    width.value = window.innerWidth;
+    height.value = window.innerHeight;
   });
 });
 </script>
@@ -35,11 +46,11 @@ onMounted(() => {
     <div class="flex flex-col items-center gap-8 mb-15">
       <NuxtImg
         src="/images/self-portrait.jpg"
-        class="rounded-full aspect-square w-32 opacity-0 scale-10 transition-all duration-2000 ease-out"
+        class="rounded-full aspect-square w-32 mt-10 opacity-0 scale-10 transition-all duration-2000 ease-out"
         :class="show ? 'opacity-100 scale-100' : ''"
       />
 
-      <div class="flex gap-5 pr-16">
+      <div v-if="width >= 960" class="flex gap-5 pr-16">
         <SparklesText
           text="Bryan Agan"
           :colors="{ first: '#9E7AFF', second: '#FE8BBB' }"
@@ -52,6 +63,22 @@ onMounted(() => {
           :colors="{ first: '#9E7AFF', second: '#FE8BBB' }"
           :sparkles-count="10"
           class="font-bold text-7xl"
+        />
+      </div>
+
+      <div v-else class="flex flex-col items-center">
+        <SparklesText
+          text="Bryan Agan"
+          :colors="{ first: '#9E7AFF', second: '#FE8BBB' }"
+          :sparkles-count="10"
+          class="font-bold text-5xl"
+        />
+        <USeparator orientation="horizontal" class="h-20" color="primary" size="xl" />
+        <SparklesText
+          text="xbryan25"
+          :colors="{ first: '#9E7AFF', second: '#FE8BBB' }"
+          :sparkles-count="10"
+          class="font-bold text-6xl"
         />
       </div>
 
