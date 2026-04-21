@@ -22,21 +22,10 @@ const isDark = computed({
 
 const show = ref(false);
 
-const width = ref(0);
-const height = ref(0);
-
 onMounted(() => {
   // Trigger animation on mount
   requestAnimationFrame(() => {
     show.value = true;
-  });
-
-  width.value = window.innerWidth;
-  height.value = window.innerHeight;
-
-  window.addEventListener('resize', () => {
-    width.value = window.innerWidth;
-    height.value = window.innerHeight;
   });
 });
 </script>
@@ -50,7 +39,7 @@ onMounted(() => {
         :class="show ? 'opacity-100 scale-100' : ''"
       />
 
-      <div v-if="width >= 960" class="flex gap-5 pr-16">
+      <div class="hidden lg:flex gap-5 pr-16">
         <SparklesText
           text="Bryan Agan"
           :colors="{ first: '#9E7AFF', second: '#FE8BBB' }"
@@ -66,7 +55,7 @@ onMounted(() => {
         />
       </div>
 
-      <div v-else class="flex flex-col items-center">
+      <div class="flex lg:hidden flex-col items-center">
         <SparklesText
           text="Bryan Agan"
           :colors="{ first: '#9E7AFF', second: '#FE8BBB' }"
